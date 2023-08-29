@@ -17,5 +17,19 @@ public class PrintAndHide : MonoBehaviour
     {
         i++;
         Debug.Log(gameObject.name + ':'+i) ;
+        if (gameObject.tag =="Red")
+        {
+            if (i == 100)
+            {
+                gameObject.SetActive(false);
+            }
+        } 
+        if (gameObject.tag == "Blue")
+        {
+            if (i == Random.Range(150, 251))
+            {
+                rend.enabled = false;
+            }
+        }
     }
 }
